@@ -1,0 +1,335 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   CUSTOM STYLES FOR CHAT SOURCES
+   ======================================== */
+
+/* Message Group Spacing */
+.message-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Top Sources Section Styling */
+.top-sources-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #0078d4;
+  max-width: 100%;
+}
+
+.top-sources-section h4 {
+  margin: 0 0 0.75rem 0;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Markdown Content in Top Sources */
+.top-sources-section .prose {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #323130;
+}
+
+.top-sources-section .prose p {
+  margin: 0.75rem 0;
+}
+
+.top-sources-section .prose p:last-child {
+  margin-bottom: 0;
+}
+
+.top-sources-section .prose strong {
+  color: #0078d4;
+  font-weight: 600;
+}
+
+.top-sources-section .prose a {
+  color: #0078d4;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.top-sources-section .prose a:hover {
+  background-color: rgba(0, 120, 212, 0.1);
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
+.top-sources-section .prose code {
+  background: #f3f2f1;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  color: #605e5c;
+  word-break: break-all;
+}
+
+/* Expandable All Sources Section */
+.all-sources-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e1dfdd;
+}
+
+.all-sources-section summary {
+  cursor: pointer;
+  color: #0078d4;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 4px;
+  user-select: none;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.all-sources-section summary:hover {
+  background-color: #f3f2f1;
+}
+
+.all-sources-section summary::before {
+  content: '▶';
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.all-sources-section[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Hide default details marker */
+.all-sources-section summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Source List */
+.source-list {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Individual Source Item */
+.source-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+.source-item:hover {
+  background: #e9ecef;
+}
+
+.source-id {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  color: #605e5c;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.source-link {
+  margin-left: auto;
+  color: #014f86;
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.source-link:hover {
+  background-color: white;
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
+/* Dark Mode Support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .top-sources-section {
+    background-color: #2b2b2b;
+    border-left-color: #4da6ff;
+  }
+
+  .top-sources-section h4 {
+    color: #e1e1e1;
+  }
+
+  .top-sources-section .prose {
+    color: #e1e1e1;
+  }
+
+  .top-sources-section .prose strong {
+    color: #4da6ff;
+  }
+
+  .top-sources-section .prose a {
+    color: #4da6ff;
+  }
+
+  .top-sources-section .prose a:hover {
+    background-color: rgba(77, 166, 255, 0.1);
+  }
+
+  .top-sources-section .prose code {
+    background: #1e1e1e;
+    color: #cccccc;
+  }
+
+  .all-sources-section {
+    border-top-color: #444444;
+  }
+
+  .all-sources-section summary {
+    color: #4da6ff;
+  }
+
+  .all-sources-section summary:hover {
+    background-color: #2b2b2b;
+  }
+
+  .source-item {
+    background: #2b2b2b;
+  }
+
+  .source-item:hover {
+    background: #333333;
+  }
+
+  .source-id {
+    color: #999999;
+  }
+
+  .source-link {
+    color: #4da6ff;
+  }
+
+  .source-link:hover {
+    background-color: #1e1e1e;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-sources-section {
+    padding: 0.75rem;
+  }
+
+  .top-sources-section h4 {
+    font-size: 0.9rem;
+  }
+
+  .source-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .source-link {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+}

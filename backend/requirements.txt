@@ -1,0 +1,25 @@
+# Core Dependencies
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# FastAPI Server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+gunicorn>=21.2.0
+
+# Azure SDK
+azure-search-documents>=11.4.0
+azure-identity>=1.15.0
+azure-core>=1.29.0
+
+# LangChain
+langchain>=0.1.0
+langchain-core>=0.1.0
+
+# HTTP Client
+requests>=2.31.0
+httpx>=0.24.0
+
+# Retry Logic
+tenacity>=8.0.0
